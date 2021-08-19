@@ -25,16 +25,16 @@ func TestVersion(t *testing.T) {
 		t.Fatalf("unexpected err: %s", err)
 	}
 
-	expectedStrTpl := `
-unit-test (build from unit test)
-	VERSION          : v1.0.0
-	INTERNAL_VERSION : v0.0.1
-	BRANCH           : master
-	HASH             : 1234567
-	BUILD_TIME       : 2020/01/07 11:18:00
-	GO_VERSION       : %s
-	WORK_DIR         : %s
-	RUN_TIME         : %s
+	expectedStrTpl := `PROGRAM          : unit-test
+VERSION          : v1.0.0
+INTERNAL_VERSION : v0.0.1
+BRANCH           : master
+HASH             : 1234567
+BUILD_TIME       : 2020/01/07 11:18:00
+GO_VERSION       : %s
+WORK_DIR         : %s
+RUN_TIME         : %s
+COMMENT          : build from unit test
 `
 	expectedStr := fmt.Sprintf(expectedStrTpl, goVersion, wd, v.RunTime)
 	actualStr, err := v.String()

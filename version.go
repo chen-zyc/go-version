@@ -20,28 +20,28 @@ var (
 	Comment   string
 )
 
-const DefaultTemplate = `
-{{.ProgramName}} ({{.Comment}})
-	VERSION          : {{.Version}}
-	INTERNAL_VERSION : {{.InternalVersion}}
-	BRANCH           : {{.Branch}}
-	HASH             : {{.Hash}}
-	BUILD_TIME       : {{.BuildTime}}
-	GO_VERSION       : {{.GoVersion}}
-	WORK_DIR         : {{.WorkDir}}
-	RUN_TIME         : {{.RunTime}}
+const DefaultTemplate = `PROGRAM          : {{.ProgramName}}
+VERSION          : {{.Version}}
+INTERNAL_VERSION : {{.InternalVersion}}
+BRANCH           : {{.Branch}}
+HASH             : {{.Hash}}
+BUILD_TIME       : {{.BuildTime}}
+GO_VERSION       : {{.GoVersion}}
+WORK_DIR         : {{.WorkDir}}
+RUN_TIME         : {{.RunTime}}
+COMMENT          : {{.Comment}}
 `
 
-const DefaultTemplate2 = `
-{{.ProgramName}} ({{.Comment}})
-	         VERSION : {{.Version}}
-	INTERNAL_VERSION : {{.InternalVersion}}
-	          BRANCH : {{.Branch}}
-	            HASH : {{.Hash}}
-	      BUILD_TIME : {{.BuildTime}}
-	      GO_VERSION : {{.GoVersion}}
-	        WORK_DIR : {{.WorkDir}}
-	        RUN_TIME : {{.RunTime}}
+const DefaultTemplate2 = `PROGRAM : {{.ProgramName}}
+		 VERSION : {{.Version}}
+INTERNAL_VERSION : {{.InternalVersion}}
+		  BRANCH : {{.Branch}}
+			HASH : {{.Hash}}
+	  BUILD_TIME : {{.BuildTime}}
+	  GO_VERSION : {{.GoVersion}}
+		WORK_DIR : {{.WorkDir}}
+		RUN_TIME : {{.RunTime}}
+		 COMMENT : {{.Comment}}
 `
 
 // V 保存程序版本及相关的值。
